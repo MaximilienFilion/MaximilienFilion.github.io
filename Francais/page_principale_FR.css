@@ -1,0 +1,135 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f8f6f1; /* Light cream background */
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header section */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  footer {
+    background-color: #f8f6f1;
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between icons */
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .social-icons img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+  }
+  
+  .social-icons a:hover img {
+    filter: grayscale(0);
+    transform: scale(1.1);
+  }
+  
+
+  .logo h1 {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+  }
+  
+  .logo h1 a {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+  }
+
+  .logo p {
+    font-size: 14px;
+    color: #666;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #888;
+  }
+  
+  /* Gallery Section */
+  .image-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px 40px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: filter 1s;
+  }
+
+  .image-container .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 5s ease; /* Smooth fade-in effect */
+    pointer-events: none; /* Prevent text from blocking hover */
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+  }
+
+    .image-container:hover img {
+      filter: blur(5px);
+      transition: filter 1s ease;
+  }
+
+  .image-container:hover .hover-text {
+      opacity: 1;
+  }
+  
